@@ -2,10 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter phrase: ");
+        String str = sc.nextLine();
+        
+        System.out.print("Enter offset: ");
+        int offset = sc.nextInt();
+        
         Fibonacci f = new Fibonacci();
-        f.fib(11);
-        System.out.println(f);
+        System.out.println(f.fibShift(str, offset));
+        
+        sc.close();
     }
 }
